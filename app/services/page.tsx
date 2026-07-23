@@ -137,14 +137,14 @@ export default function ServicesPage() {
                         Procurement &amp; Manpower
                     </h2>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: '7fr 5fr', gap: '24px', marginTop: '48px' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '7fr 5fr', gap: '24px', marginTop: '48px', alignItems: 'stretch' }}>
                         {/* Heavy equipment card */}
-                        <div style={{ height: '280px', background: '#eae7e7', border: '1px solid #dcd9d9', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.25rem' }}>
+                        <div style={{ height: '100%', minHeight: '280px', background: '#eae7e7', border: '1px solid #dcd9d9', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.25rem' }}>
                             <div style={{ color: '#8e7067', fontFamily: 'monospace', fontSize: '16px', fontWeight: 'bold' }}>500 x 280</div>
                             <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', padding: '20px 24px', background: 'rgba(28,27,27,0.75)', borderRadius: '0 0 0.25rem 0.25rem' }}>
                                 <p style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '16px', color: '#ffffff', textTransform: 'uppercase', marginBottom: '8px' }}>Heavy Equipment Fleet</p>
                                 <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '13px', color: '#e2bfb4' }}>Comprehensive fleet of state-of-the-art heavy equipment. Encompassing more than 12 specialized units.</p>
-                                <button style={{ background: 'none', border: '1px solid #a93200', color: '#a93200', fontFamily: 'JetBrains Mono, monospace', fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', padding: '8px 16px', marginTop: '12px', cursor: 'pointer', borderRadius: '0.25rem' }}>
+                                <button style={{ background: '#a93200', border: '1px solid #a93200', color: '#ffffff', fontFamily: 'JetBrains Mono, monospace', fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', padding: '8px 16px', marginTop: '12px', cursor: 'pointer', borderRadius: '0.25rem' }}>
                                     VIEW FLEET →
                                 </button>
                             </div>
