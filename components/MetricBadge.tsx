@@ -8,11 +8,11 @@ interface MetricBadgeProps {
 export default function MetricBadge({ value, label, sublabel }: MetricBadgeProps) {
     return (
         <div style={{ display: 'flex', alignItems: 'stretch', gap: '16px' }}>
-            {/* Gradient accent bar */}
+            {/* Accent bar */}
             <div
                 style={{
                     width: '3px',
-                    background: 'linear-gradient(to bottom, #F15A24, #ED1C24)',
+                    background: '#a93200',
                     flexShrink: 0,
                 }}
             />
@@ -23,7 +23,7 @@ export default function MetricBadge({ value, label, sublabel }: MetricBadgeProps
                         fontWeight: 800,
                         fontSize: '40px',
                         lineHeight: 1.1,
-                        color: '#ffffff',
+                        color: '#1c1b1b',
                     }}
                 >
                     {value}
@@ -35,7 +35,7 @@ export default function MetricBadge({ value, label, sublabel }: MetricBadgeProps
                         fontWeight: 500,
                         letterSpacing: '0.08em',
                         textTransform: 'uppercase',
-                        color: '#a98a80',
+                        color: '#5a4139',
                         marginTop: '4px',
                     }}
                 >
@@ -44,9 +44,9 @@ export default function MetricBadge({ value, label, sublabel }: MetricBadgeProps
                 {sublabel && (
                     <div
                         style={{
-                            fontFamily: 'Inter, sans-serif',
+                            fontFamily: 'Sora, sans-serif',
                             fontSize: '13px',
-                            color: '#5a4139',
+                            color: '#8e7067',
                             marginTop: '2px',
                         }}
                     >

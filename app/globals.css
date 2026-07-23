@@ -5,29 +5,43 @@
 @tailwind utilities;
 
 :root {
-  --surface: #131313;
-  --surface-dim: #131313;
-  --surface-bright: #393939;
-  --surface-container-lowest: #0e0e0e;
-  --surface-container-low: #1b1c1c;
-  --surface-container: #1f2020;
-  --surface-container-high: #2a2a2a;
-  --surface-container-highest: #353535;
-  --on-surface: #e5e2e1;
-  --on-surface-variant: #e2bfb4;
-  --outline: #a98a80;
-  --outline-variant: #5a4139;
-  --primary: #ffb59e;
-  --primary-container: #f75f28;
-  --inverse-primary: #ad3300;
-  --secondary: #ffb4ab;
-  --secondary-container: #db031a;
-  --background: #131313;
-  --on-background: #e5e2e1;
+  --surface: #fcf9f8;
+  --surface-dim: #dcd9d9;
+  --surface-bright: #fcf9f8;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f6f3f2;
+  --surface-container: #f0eded;
+  --surface-container-high: #eae7e7;
+  --surface-container-highest: #e5e2e1;
+  --on-surface: #1c1b1b;
+  --on-surface-variant: #5a4139;
+  --inverse-surface: #313030;
+  --inverse-on-surface: #f3f0ef;
+  --outline: #8e7067;
+  --outline-variant: #e2bfb4;
+  --surface-tint: #ad3300;
+  --primary: #a93200;
+  --on-primary: #ffffff;
+  --primary-container: #d1430a;
+  --on-primary-container: #fffbff;
+  --inverse-primary: #ffb59e;
+  --secondary: #bb0013;
+  --on-secondary: #ffffff;
+  --secondary-container: #e71520;
+  --tertiary: #0a47ee;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #3e65ff;
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #93000a;
+  --background: #fcf9f8;
+  --on-background: #1c1b1b;
+  --surface-variant: #e5e2e1;
 
   /* Brand gradient */
-  --grad-primary: linear-gradient(to right, #F15A24, #ED1C24);
-  --grad-primary-vertical: linear-gradient(to bottom, #F15A24, #ED1C24);
+  --grad-primary: linear-gradient(to right, #a93200, #bb0013);
+  --grad-primary-vertical: linear-gradient(to bottom, #a93200, #bb0013);
 }
 
 * {
@@ -57,20 +71,10 @@ body {
   overflow-x: hidden;
 }
 
-/* Sharp corners everywhere */
-*,
-*::before,
-*::after {
-  border-radius: 0 !important;
-}
-
-/* Exception for circular elements - uses class override */
+/* Soft-Industrial shape language: 4px default radius */
+/* Exception for circular elements */
 .rounded-full {
   border-radius: 9999px !important;
-}
-
-.rounded-sm {
-  border-radius: 2px !important;
 }
 
 /* Typography helpers */
@@ -130,38 +134,40 @@ body {
 /* Section divider */
 .section-divider {
   height: 1px;
-  background: #333333;
+  background: var(--outline-variant);
   border: none;
 }
 
 /* Ghost button */
 .btn-ghost {
-  border: 1px solid #ffffff;
+  border: 1px solid var(--tertiary);
   background: transparent;
-  color: #ffffff;
+  color: var(--tertiary);
   font-family: 'Sora', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 14px 32px;
+  border-radius: 0.25rem;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(10, 71, 238, 0.08);
 }
 
 /* Primary CTA button */
 .btn-primary {
-  background: var(--grad-primary);
-  color: #ffffff;
+  background: var(--primary);
+  color: var(--on-primary);
   font-family: 'Sora', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 14px 32px;
   border: none;
+  border-radius: 0.25rem;
   cursor: pointer;
   transition: opacity 0.2s ease;
 }
@@ -172,24 +178,24 @@ body {
 
 /* Input Blueprint style */
 .input-blueprint {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #333333;
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: 0.25rem;
   color: var(--on-surface);
-  font-family: 'Inter', sans-serif;
-  padding: 12px 0;
+  font-family: 'Sora', sans-serif;
+  padding: 12px 16px;
   width: 100%;
   outline: none;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .input-blueprint:focus {
-  border-image: var(--grad-primary) 1;
-  border-bottom: 1px solid #F15A24;
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 0 3px rgba(169, 50, 0, 0.1);
 }
 
 .input-blueprint::placeholder {
-  color: #555555;
+  color: var(--outline);
 }
 
 /* Metric accent bar */
@@ -202,14 +208,17 @@ body {
 
 /* Technical thin border card */
 .card-industrial {
-  border: 1px solid #333333;
-  background: #1f2020;
+  border: 1px solid var(--outline-variant);
+  background: var(--surface-container-lowest);
+  border-radius: 0.25rem;
   position: relative;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .card-industrial-light {
-  border: 1px solid #E0E0E0;
-  background: #f9f9f9;
+  border: 1px solid var(--outline-variant);
+  background: var(--surface-container-low);
+  border-radius: 0.25rem;
 }
 
 /* Scrollbar */
@@ -218,15 +227,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #131313;
+  background: var(--surface-container-low);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333333;
+  background: var(--outline-variant);
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #F15A24;
+  background: var(--primary);
 }
 
 /* ═══ Responsive grid helpers ═══ */
@@ -360,10 +370,10 @@ body {
 
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(241, 90, 36, 0.4);
+    box-shadow: 0 0 0 0 rgba(169, 50, 0, 0.4);
   }
 
   50% {
-    box-shadow: 0 0 0 12px rgba(241, 90, 36, 0);
+    box-shadow: 0 0 0 12px rgba(169, 50, 0, 0);
   }
 }

@@ -26,33 +26,33 @@ export default function ProjectCard({
                 overflow: 'hidden',
                 borderWidth: '1px',
                 borderStyle: 'solid',
+                borderColor: '#e2bfb4',
                 cursor: 'pointer',
                 transition: 'border-color 0.2s',
             }}
-            className="border-[#333333] hover:border-[#F15A24]"
         >
             {/* Background image placeholder */}
             <div
                 style={{
                     position: 'absolute',
                     inset: 0,
-                    background: '#e5e5e5', // gray placeholder
+                    background: '#eae7e7',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                 }}
             >
-                <div style={{ color: '#888888', fontFamily: 'monospace', fontSize: '16px', fontWeight: 'bold' }}>
+                <div style={{ color: '#8e7067', fontFamily: 'monospace', fontSize: '16px', fontWeight: 'bold' }}>
                     400 x 500
                 </div>
             </div>
 
-            {/* Dark overlay */}
+            {/* Overlay — darker at bottom for legibility */}
             <div
                 style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, transparent 100%)',
+                    background: 'linear-gradient(to top, rgba(28,27,27,0.92) 0%, rgba(28,27,27,0.4) 55%, transparent 100%)',
                 }}
             />
 
@@ -62,10 +62,11 @@ export default function ProjectCard({
                     position: 'absolute',
                     top: '16px',
                     right: '16px',
-                    background: 'rgba(0,0,0,0.7)',
+                    background: 'rgba(252,249,248,0.9)',
                     backdropFilter: 'blur(4px)',
-                    border: '1px solid #333333',
+                    border: '1px solid #e2bfb4',
                     padding: '6px 10px',
+                    borderRadius: '0.25rem',
                 }}
             >
                 <span
@@ -74,7 +75,7 @@ export default function ProjectCard({
                         fontSize: '10px',
                         fontWeight: 500,
                         letterSpacing: '0.06em',
-                        color: '#F15A24',
+                        color: '#a93200',
                     }}
                 >
                     Val. {contractValue}
@@ -98,7 +99,7 @@ export default function ProjectCard({
                         fontWeight: 500,
                         letterSpacing: '0.12em',
                         textTransform: 'uppercase',
-                        color: '#F15A24',
+                        color: '#e2bfb4',
                         display: 'block',
                         marginBottom: '6px',
                     }}
@@ -119,9 +120,9 @@ export default function ProjectCard({
                 </h3>
                 <p
                     style={{
-                        fontFamily: 'Inter, sans-serif',
+                        fontFamily: 'Sora, sans-serif',
                         fontSize: '13px',
-                        color: '#c8c6c5',
+                        color: '#dcd9d9',
                         lineHeight: 1.5,
                         marginBottom: '12px',
                         display: '-webkit-box',
@@ -138,7 +139,7 @@ export default function ProjectCard({
                         style={{
                             fontFamily: 'JetBrains Mono, monospace',
                             fontSize: '11px',
-                            color: '#a98a80',
+                            color: '#e2bfb4',
                             letterSpacing: '0.04em',
                         }}
                     >

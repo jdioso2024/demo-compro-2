@@ -22,9 +22,9 @@ export default function Navbar() {
                 left: 0,
                 right: 0,
                 zIndex: 100,
-                background: 'rgba(19,19,19,0.95)',
+                background: 'rgba(252,249,248,0.96)',
                 backdropFilter: 'blur(8px)',
-                borderBottom: '1px solid #222222',
+                borderBottom: '1px solid #e2bfb4',
             }}
         >
             <div
@@ -45,7 +45,7 @@ export default function Navbar() {
                         style={{
                             width: '32px',
                             height: '32px',
-                            background: 'linear-gradient(to right, #F15A24, #ED1C24)',
+                            background: '#a93200',
                             borderRadius: '50%',
                             display: 'flex',
                             alignItems: 'center',
@@ -54,7 +54,7 @@ export default function Navbar() {
                     >
                         <span style={{ color: '#fff', fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '16px' }}>O</span>
                     </div>
-                    <span style={{ color: '#ffffff', fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '18px', letterSpacing: '0.02em' }}>
+                    <span style={{ color: '#1c1b1b', fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '18px', letterSpacing: '0.02em' }}>
                         DEN
                     </span>
                 </Link>
@@ -69,7 +69,7 @@ export default function Navbar() {
                             <Link
                                 href={link.href}
                                 style={{
-                                    color: '#e5e2e1',
+                                    color: '#1c1b1b',
                                     fontFamily: 'Inter, sans-serif',
                                     fontSize: '14px',
                                     fontWeight: 500,
@@ -77,8 +77,8 @@ export default function Navbar() {
                                     letterSpacing: '0.01em',
                                     transition: 'color 0.2s',
                                 }}
-                                onMouseEnter={(e) => (e.currentTarget.style.color = '#F15A24')}
-                                onMouseLeave={(e) => (e.currentTarget.style.color = '#e5e2e1')}
+                                onMouseEnter={(e) => (e.currentTarget.style.color = '#a93200')}
+                                onMouseLeave={(e) => (e.currentTarget.style.color = '#1c1b1b')}
                             >
                                 {link.label}
                             </Link>
@@ -91,7 +91,7 @@ export default function Navbar() {
                     href="/contact"
                     className="desktop-nav"
                     style={{
-                        background: 'linear-gradient(to right, #F15A24, #ED1C24)',
+                        background: '#a93200',
                         color: '#ffffff',
                         fontFamily: 'Sora, sans-serif',
                         fontWeight: 700,
@@ -101,6 +101,7 @@ export default function Navbar() {
                         padding: '10px 20px',
                         textDecoration: 'none',
                         display: 'inline-block',
+                        borderRadius: '0.25rem',
                     }}
                 >
                     MINTA PENAWARAN
@@ -114,7 +115,7 @@ export default function Navbar() {
                         display: 'none',
                         background: 'none',
                         border: 'none',
-                        color: '#e5e2e1',
+                        color: '#1c1b1b',
                         cursor: 'pointer',
                         padding: '4px',
                     }}
@@ -127,8 +128,8 @@ export default function Navbar() {
             {open && (
                 <div
                     style={{
-                        background: '#1b1c1c',
-                        borderTop: '1px solid #333',
+                        background: '#fcf9f8',
+                        borderTop: '1px solid #e2bfb4',
                         padding: '24px 24px',
                         display: 'flex',
                         flexDirection: 'column',
@@ -141,7 +142,7 @@ export default function Navbar() {
                             href={link.href}
                             onClick={() => setOpen(false)}
                             style={{
-                                color: '#e5e2e1',
+                                color: '#1c1b1b',
                                 fontFamily: 'Sora, sans-serif',
                                 fontWeight: 600,
                                 fontSize: '16px',
@@ -155,7 +156,7 @@ export default function Navbar() {
                         href="/contact"
                         onClick={() => setOpen(false)}
                         style={{
-                            background: 'linear-gradient(to right, #F15A24, #ED1C24)',
+                            background: '#a93200',
                             color: '#ffffff',
                             fontFamily: 'Sora, sans-serif',
                             fontWeight: 700,
@@ -166,6 +167,7 @@ export default function Navbar() {
                             textDecoration: 'none',
                             textAlign: 'center',
                             display: 'block',
+                            borderRadius: '0.25rem',
                         }}
                     >
                         MINTA PENAWARAN

@@ -19,7 +19,7 @@ const footerLinks = {
 
 export default function Footer() {
     return (
-        <footer style={{ background: '#0e0e0e', borderTop: '1px solid #222222', paddingTop: '64px', paddingBottom: '32px' }}>
+        <footer style={{ background: '#f0eded', borderTop: '1px solid #e2bfb4', paddingTop: '64px', paddingBottom: '32px' }}>
             <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }} className="footer-inner">
                 {/* Main grid */}
                 <div
@@ -33,7 +33,7 @@ export default function Footer() {
                                 style={{
                                     width: '32px',
                                     height: '32px',
-                                    background: 'linear-gradient(to right, #F15A24, #ED1C24)',
+                                    background: '#a93200',
                                     borderRadius: '50%',
                                     display: 'flex',
                                     alignItems: 'center',
@@ -42,7 +42,7 @@ export default function Footer() {
                             >
                                 <span style={{ color: '#fff', fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '16px' }}>O</span>
                             </div>
-                            <span style={{ color: '#ffffff', fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '18px' }}>DEN</span>
+                            <span style={{ color: '#1c1b1b', fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '18px' }}>DEN</span>
                         </div>
                         <p style={{ color: '#a98a80', fontFamily: 'Inter, sans-serif', fontSize: '14px', lineHeight: '1.6', maxWidth: '280px' }}>
                             PT Dayana Energi Nusantara adalah perusahaan konstruksi sipil dan mechanical engineering terkemuka di Indonesia yang memberikan solusi presisi tinggi untuk sektor energi.
@@ -55,20 +55,21 @@ export default function Footer() {
                                     style={{
                                         width: '36px',
                                         height: '36px',
-                                        border: '1px solid #333333',
+                                        border: '1px solid #e2bfb4',
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center',
-                                        color: '#a98a80',
+                                        color: '#8e7067',
                                         transition: 'border-color 0.2s, color 0.2s',
+                                        borderRadius: '0.25rem',
                                     }}
                                     onMouseEnter={(e) => {
-                                        e.currentTarget.style.borderColor = '#F15A24';
-                                        e.currentTarget.style.color = '#F15A24';
+                                        e.currentTarget.style.borderColor = '#a93200';
+                                        e.currentTarget.style.color = '#a93200';
                                     }}
                                     onMouseLeave={(e) => {
-                                        e.currentTarget.style.borderColor = '#333333';
-                                        e.currentTarget.style.color = '#a98a80';
+                                        e.currentTarget.style.borderColor = '#e2bfb4';
+                                        e.currentTarget.style.color = '#8e7067';
                                     }}
                                 >
                                     <Icon size={16} />
@@ -79,13 +80,13 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <p style={{ color: '#ffffff', fontFamily: 'Sora, sans-serif', fontWeight: 600, fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '20px' }}>Quick Links</p>
+                        <p style={{ color: '#1c1b1b', fontFamily: 'Sora, sans-serif', fontWeight: 600, fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '20px' }}>Quick Links</p>
                         <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
                             {footerLinks.quickLinks.map((link) => (
                                 <li key={link.href}>
-                                    <Link href={link.href} style={{ color: '#a98a80', fontFamily: 'Inter, sans-serif', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s' }}
-                                        onMouseEnter={(e) => (e.currentTarget.style.color = '#F15A24')}
-                                        onMouseLeave={(e) => (e.currentTarget.style.color = '#a98a80')}
+                                    <Link href={link.href} style={{ color: '#5a4139', fontFamily: 'Inter, sans-serif', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s' }}
+                                        onMouseEnter={(e) => (e.currentTarget.style.color = '#a93200')}
+                                        onMouseLeave={(e) => (e.currentTarget.style.color = '#5a4139')}
                                     >{link.label}</Link>
                                 </li>
                             ))}
@@ -94,13 +95,13 @@ export default function Footer() {
 
                     {/* Compliance */}
                     <div>
-                        <p style={{ color: '#ffffff', fontFamily: 'Sora, sans-serif', fontWeight: 600, fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '20px' }}>Compliance</p>
+                        <p style={{ color: '#1c1b1b', fontFamily: 'Sora, sans-serif', fontWeight: 600, fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '20px' }}>Compliance</p>
                         <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
                             {footerLinks.compliance.map((link) => (
                                 <li key={link.href}>
-                                    <Link href={link.href} style={{ color: '#a98a80', fontFamily: 'Inter, sans-serif', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s' }}
-                                        onMouseEnter={(e) => (e.currentTarget.style.color = '#F15A24')}
-                                        onMouseLeave={(e) => (e.currentTarget.style.color = '#a98a80')}
+                                    <Link href={link.href} style={{ color: '#5a4139', fontFamily: 'Inter, sans-serif', fontSize: '14px', textDecoration: 'none', transition: 'color 0.2s' }}
+                                        onMouseEnter={(e) => (e.currentTarget.style.color = '#a93200')}
+                                        onMouseLeave={(e) => (e.currentTarget.style.color = '#5a4139')}
                                     >{link.label}</Link>
                                 </li>
                             ))}
@@ -109,23 +110,23 @@ export default function Footer() {
 
                     {/* Headquarters */}
                     <div>
-                        <p style={{ color: '#ffffff', fontFamily: 'Sora, sans-serif', fontWeight: 600, fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '12px' }}>Headquarters</p>
-                        <p style={{ color: '#a98a80', fontFamily: 'Inter, sans-serif', fontSize: '13px', lineHeight: '1.6', marginBottom: '16px' }}>
+                        <p style={{ color: '#1c1b1b', fontFamily: 'Sora, sans-serif', fontWeight: 600, fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '12px' }}>Headquarters</p>
+                        <p style={{ color: '#5a4139', fontFamily: 'Inter, sans-serif', fontSize: '13px', lineHeight: '1.6', marginBottom: '16px' }}>
                             Gedung Jaya Lt. 5<br />
                             Jl. M.H. Thamrin Kav. 12<br />
                             Jakarta Pusat, Indonesia
                         </p>
-                        <p style={{ color: '#ffffff', fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '4px' }}>General Inquiries</p>
-                        <p style={{ color: '#F15A24', fontFamily: 'Inter, sans-serif', fontSize: '13px' }}>info@dayanaenergi.co.id</p>
+                        <p style={{ color: '#1c1b1b', fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '4px' }}>General Inquiries</p>
+                        <p style={{ color: '#a93200', fontFamily: 'Inter, sans-serif', fontSize: '13px' }}>info@dayanaenergi.co.id</p>
                     </div>
                 </div>
 
                 {/* Bottom bar */}
-                <div style={{ borderTop: '1px solid #222222', paddingTop: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} className="footer-bottom">
-                    <p style={{ color: '#5a4139', fontFamily: 'JetBrains Mono, monospace', fontSize: '12px' }}>
+                <div style={{ borderTop: '1px solid #e2bfb4', paddingTop: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} className="footer-bottom">
+                    <p style={{ color: '#8e7067', fontFamily: 'JetBrains Mono, monospace', fontSize: '12px' }}>
                         © 2025 PT DAYANA ENERGI NUSANTARA. ALL RIGHTS RESERVED.
                     </p>
-                    <p style={{ color: '#5a4139', fontFamily: 'JetBrains Mono, monospace', fontSize: '12px' }}>
+                    <p style={{ color: '#8e7067', fontFamily: 'JetBrains Mono, monospace', fontSize: '12px' }}>
                         RELIABILITY · PRECISION
                     </p>
                 </div>

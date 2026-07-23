@@ -26,25 +26,25 @@ export default function HSEPage() {
     return (
         <>
             {/* Hero */}
-            <section style={{ minHeight: '60vh', background: '#131313', display: 'flex', alignItems: 'center', paddingTop: '64px', position: 'relative', overflow: 'hidden' }}>
-                <div aria-hidden style={{ position: 'absolute', right: '-5%', top: '50%', transform: 'translateY(-50%)', fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '60vw', lineHeight: 1, color: '#ffffff', opacity: 0.02, pointerEvents: 'none', userSelect: 'none' }}>D</div>
-                <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '4px', background: 'linear-gradient(to bottom, #ED1C24, #F15A24)' }} />
+            <section style={{ minHeight: '60vh', background: '#fcf9f8', display: 'flex', alignItems: 'center', paddingTop: '64px', position: 'relative', overflow: 'hidden' }}>
+                <div aria-hidden style={{ position: 'absolute', right: '-5%', top: '50%', transform: 'translateY(-50%)', fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '60vw', lineHeight: 1, color: '#a93200', opacity: 0.04, pointerEvents: 'none', userSelect: 'none' }}>D</div>
+                <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '4px', background: '#a93200' }} />
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '80px 64px', position: 'relative', zIndex: 1 }} className="section-pad">
-                    <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#ED1C24', marginBottom: '24px' }}>— Health, Safety & Environment</p>
-                    <h1 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: 'clamp(36px, 7vw, 72px)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'uppercase', color: '#ffffff', maxWidth: '800px', marginBottom: '24px' }}>
+                    <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#a93200', marginBottom: '24px' }}>— Health, Safety & Environment</p>
+                    <h1 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: 'clamp(36px, 7vw, 72px)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'uppercase', color: '#1c1b1b', maxWidth: '800px', marginBottom: '24px' }}>
                         Safety is{' '}
-                        <span style={{ background: 'linear-gradient(to right, #F15A24, #ED1C24)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Non-Negotiable</span>
+                        <span style={{ color: '#a93200' }}>Non-Negotiable</span>
                     </h1>
-                    <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '18px', color: '#a98a80', lineHeight: 1.6, maxWidth: '540px' }}>
+                    <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '18px', color: '#5a4139', lineHeight: 1.6, maxWidth: '540px' }}>
                         Every project site operates under a rigorous HSE framework. Our zero-accident record is not a coincidence — it is the result of disciplined systems, trained personnel, and an uncompromising safety culture.
                     </p>
                 </div>
             </section>
 
             {/* ISO Certifications */}
-            <section style={{ background: '#0e0e0e', padding: '80px 0', borderTop: '1px solid #222' }}>
+            <section style={{ background: '#f6f3f2', padding: '80px 0', borderTop: '1px solid #e2bfb4' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }} className="section-pad">
-                    <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#F15A24', marginBottom: '40px' }}>— Active Certifications</p>
+                    <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#a93200', marginBottom: '40px' }}>— Active Certifications</p>
                     <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                         {isoStandards.map((s) => (
                             <ComplianceBadge key={s.code} code={s.code} label={s.label} />
@@ -54,15 +54,15 @@ export default function HSEPage() {
             </section>
 
             {/* Principles grid */}
-            <section style={{ background: '#131313', padding: '80px 0 120px' }}>
+            <section style={{ background: '#fcf9f8', padding: '80px 0 120px' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }} className="section-pad">
-                    <h2 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '36px', textTransform: 'uppercase', color: '#ffffff', marginBottom: '56px' }}>Our HSE Principles</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', background: '#333' }} className="hse-grid">
+                    <h2 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '36px', textTransform: 'uppercase', color: '#1c1b1b', marginBottom: '56px' }}>Our HSE Principles</h2>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', background: '#e2bfb4' }} className="hse-grid">
                         {safetyPrinciples.map((p) => (
-                            <div key={p.title} style={{ background: '#131313', padding: '32px 24px' }}>
+                            <div key={p.title} style={{ background: '#fcf9f8', padding: '32px 24px' }}>
                                 <div style={{ fontSize: '32px', marginBottom: '16px' }}>{p.icon}</div>
-                                <h3 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '16px', color: '#ffffff', textTransform: 'uppercase', marginBottom: '12px' }}>{p.title}</h3>
-                                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '14px', color: '#a98a80', lineHeight: 1.6 }}>{p.desc}</p>
+                                <h3 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '16px', color: '#1c1b1b', textTransform: 'uppercase', marginBottom: '12px' }}>{p.title}</h3>
+                                <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '14px', color: '#5a4139', lineHeight: 1.6 }}>{p.desc}</p>
                             </div>
                         ))}
                     </div>
