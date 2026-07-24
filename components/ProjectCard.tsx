@@ -31,20 +31,19 @@ export default function ProjectCard({
                 transition: 'border-color 0.2s',
             }}
         >
-            {/* Background image placeholder */}
+            {/* Background image */}
             <div
                 style={{
                     position: 'absolute',
                     inset: 0,
                     background: '#eae7e7',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
                 }}
             >
-                <div style={{ color: '#8e7067', fontFamily: 'monospace', fontSize: '16px', fontWeight: 'bold' }}>
-                    400 x 500
-                </div>
+                <img
+                    src={imageBg || "/construction(400x500).webp"}
+                    alt={title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
             </div>
 
             {/* Overlay — darker at bottom for legibility */}

@@ -10,16 +10,44 @@ export default function HomePage() {
             <section
                 style={{
                     minHeight: '100vh',
-                    background: '#fcf9f8',
+                    background: '#0d0603',
                     display: 'flex',
                     alignItems: 'center',
                     position: 'relative',
                     overflow: 'hidden',
                     paddingTop: '64px',
-                    backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23a93200\' fill-opacity=\'0.03\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
                 }}
             >
-                {/* D Watermark */}
+                {/* Video Background */}
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        zIndex: 0,
+                    }}
+                >
+                    <source src="/hero.webm" type="video/webm" />
+                </video>
+
+                {/* Dark Overlay */}
+                <div
+                    style={{
+                        position: 'absolute',
+                        inset: 0,
+                        background: 'linear-gradient(135deg, rgba(10,4,2,0.72) 0%, rgba(20,8,4,0.55) 100%)',
+                        zIndex: 1,
+                    }}
+                />
+
+                {/* DEN Watermark */}
                 <div
                     aria-hidden
                     style={{
@@ -32,9 +60,10 @@ export default function HomePage() {
                         fontSize: '55vw',
                         lineHeight: 1,
                         color: '#a93200',
-                        opacity: 0.04,
+                        opacity: 0.06,
                         pointerEvents: 'none',
                         userSelect: 'none',
+                        zIndex: 2,
                     }}
                 >
                     DEN
@@ -47,7 +76,7 @@ export default function HomePage() {
                         margin: '0 auto',
                         padding: '80px 64px 0 64px',
                         position: 'relative',
-                        zIndex: 1,
+                        zIndex: 3,
                         width: '100%',
                     }}
                 >
@@ -59,18 +88,19 @@ export default function HomePage() {
                             fontWeight: 500,
                             letterSpacing: '0.12em',
                             textTransform: 'uppercase',
-                            color: '#5a4139',
+                            color: 'rgba(255,255,255,0.75)',
                             marginBottom: '24px',
-                            border: '1px solid #e2bfb4',
+                            border: '1px solid rgba(255,255,255,0.18)',
                             padding: '6px 12px',
                             display: 'inline-flex',
                             alignItems: 'center',
                             gap: '8px',
-                            background: '#f0eded',
+                            background: 'rgba(255,255,255,0.07)',
                             borderRadius: '0.25rem',
+                            backdropFilter: 'blur(4px)',
                         }}
                     >
-                        <div style={{ width: '4px', height: '4px', background: '#a93200', borderRadius: '50%' }} />
+                        <div style={{ width: '4px', height: '4px', background: '#e84a1a', borderRadius: '50%' }} />
                         CIVIL | INFRASTRUCTURE | ENERGY
                     </div>
 
@@ -82,13 +112,14 @@ export default function HomePage() {
                             fontSize: 'clamp(48px, 6vw, 72px)',
                             lineHeight: 1.05,
                             letterSpacing: '-0.02em',
-                            color: '#1c1b1b',
+                            color: '#ffffff',
                             maxWidth: '900px',
                             marginBottom: '32px',
+                            textShadow: '0 2px 24px rgba(0,0,0,0.4)',
                         }}
                     >
                         MENJADI MITRA<br />
-                        <span style={{ color: '#a93200' }}>
+                        <span style={{ color: '#e84a1a' }}>
                             TANGGUH
                         </span><br />
                         ANDA DI LAPANGAN
@@ -98,7 +129,7 @@ export default function HomePage() {
                         style={{
                             fontFamily: 'Sora, sans-serif',
                             fontSize: '18px',
-                            color: '#5a4139',
+                            color: 'rgba(255,255,255,0.78)',
                             lineHeight: 1.6,
                             maxWidth: '600px',
                             marginBottom: '48px',
@@ -132,9 +163,9 @@ export default function HomePage() {
                         <Link
                             href="/portfolio"
                             style={{
-                                border: '1px solid #8e7067',
-                                color: '#1c1b1b',
-                                background: 'transparent',
+                                border: '1px solid rgba(255,255,255,0.4)',
+                                color: '#ffffff',
+                                background: 'rgba(255,255,255,0.07)',
                                 fontFamily: 'Sora, sans-serif',
                                 fontWeight: 700,
                                 fontSize: '13px',
@@ -145,7 +176,7 @@ export default function HomePage() {
                                 display: 'inline-flex',
                                 alignItems: 'center',
                                 gap: '8px',
-                                transition: 'background 0.2s',
+                                backdropFilter: 'blur(4px)',
                                 borderRadius: '0.25rem',
                             }}
                         >
@@ -155,7 +186,7 @@ export default function HomePage() {
 
                     {/* ═══════════════════════════════════════ 2. STATS STRIP ═══ */}
                     <div style={{
-                        borderTop: '1px dotted #e2bfb4',
+                        borderTop: '1px solid rgba(255,255,255,0.15)',
                         paddingTop: '40px',
                         paddingBottom: '40px',
                         display: 'flex',
@@ -163,27 +194,27 @@ export default function HomePage() {
                         gap: '24px'
                     }}>
                         {/* Stat 1 */}
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', borderLeft: '2px solid #a93200', paddingLeft: '16px', paddingRight: '32px', borderRight: '1px solid #e2bfb4' }}>
-                            <ShieldCheck color="#a93200" size={28} />
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', borderLeft: '2px solid #a93200', paddingLeft: '16px', paddingRight: '32px', borderRight: '1px solid rgba(255,255,255,0.15)' }}>
+                            <ShieldCheck color="#e84a1a" size={28} />
                             <div>
-                                <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '18px', color: '#1c1b1b', lineHeight: 1.2 }}>ZERO<br />ACCIDENT</div>
-                                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', color: '#8e7067', marginTop: '4px' }}>Safety &amp; Health<br />Compliance</div>
+                                <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '18px', color: '#ffffff', lineHeight: 1.2 }}>ZERO<br />ACCIDENT</div>
+                                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', color: 'rgba(255,255,255,0.55)', marginTop: '4px' }}>Safety &amp; Health<br />Compliance</div>
                             </div>
                         </div>
                         {/* Stat 2 */}
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', borderLeft: '2px solid #a93200', paddingLeft: '16px', paddingRight: '32px', borderRight: '1px solid #e2bfb4' }}>
-                            <Clock color="#a93200" size={28} />
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', borderLeft: '2px solid #a93200', paddingLeft: '16px', paddingRight: '32px', borderRight: '1px solid rgba(255,255,255,0.15)' }}>
+                            <Clock color="#e84a1a" size={28} />
                             <div>
-                                <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '18px', color: '#1c1b1b', lineHeight: 1.2 }}>100% ON-<br />TIME</div>
-                                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', color: '#8e7067', marginTop: '4px' }}>Quality &amp; Schedule<br />Guarantees</div>
+                                <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '18px', color: '#ffffff', lineHeight: 1.2 }}>100% ON-<br />TIME</div>
+                                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', color: 'rgba(255,255,255,0.55)', marginTop: '4px' }}>Quality &amp; Schedule<br />Guarantees</div>
                             </div>
                         </div>
                         {/* Stat 3 */}
                         <div style={{ display: 'flex', alignItems: 'center', gap: '16px', borderLeft: '2px solid #a93200', paddingLeft: '16px' }}>
-                            <Award color="#a93200" size={28} />
+                            <Award color="#e84a1a" size={28} />
                             <div>
-                                <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '18px', color: '#1c1b1b', lineHeight: 1.2 }}>CSMS<br />CERTIFIED</div>
-                                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', color: '#8e7067', marginTop: '4px' }}>High level compliance</div>
+                                <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '18px', color: '#ffffff', lineHeight: 1.2 }}>CSMS<br />CERTIFIED</div>
+                                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', color: 'rgba(255,255,255,0.55)', marginTop: '4px' }}>High level compliance</div>
                             </div>
                         </div>
                     </div>
@@ -326,7 +357,7 @@ export default function HomePage() {
                             </div>
                         </div>
 
-                        {/* HSE Image Placeholder */}
+                        {/* HSE Image */}
                         <div style={{ position: 'relative' }}>
                             <div style={{ position: 'absolute', top: '-16px', right: '-16px', bottom: '16px', left: '16px', border: '1px solid #e2bfb4', zIndex: 0 }} />
                             <div
@@ -337,14 +368,14 @@ export default function HomePage() {
                                     position: 'relative',
                                     zIndex: 1,
                                     border: '1px solid #dcd9d9',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
+                                    overflow: 'hidden',
                                 }}
                             >
-                                <div style={{ color: '#8e7067', fontFamily: 'monospace', fontSize: '16px', fontWeight: 'bold' }}>
-                                    600 x 400
-                                </div>
+                                <img
+                                    src="/construction(600x400).webp"
+                                    alt="HSE Compliance"
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                />
                             </div>
                         </div>
 

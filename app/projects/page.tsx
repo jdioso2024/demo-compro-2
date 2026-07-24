@@ -62,15 +62,22 @@ export default function ProjectsPage() {
     return (
         <>
             {/* ═══════════════════════════ HERO ═══ */}
-            <section style={{ minHeight: '70vh', background: '#fcf9f8', display: 'flex', alignItems: 'center', paddingTop: '64px', position: 'relative', overflow: 'hidden', backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23a93200\' fill-opacity=\'0.03\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}>
-                <div aria-hidden style={{ position: 'absolute', right: '-5%', top: '50%', transform: 'translateY(-50%)', fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '60vw', lineHeight: 1, color: '#a93200', opacity: 0.04, pointerEvents: 'none', userSelect: 'none' }}>D</div>
-                <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '80px 64px', position: 'relative', zIndex: 1 }} className="section-pad">
-                    <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#a93200', marginBottom: '24px' }}>— Portfolio Projects</p>
-                    <h1 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: 'clamp(36px, 7vw, 72px)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'uppercase', color: '#1c1b1b', maxWidth: '800px', marginBottom: '24px' }}>
+            <section style={{ minHeight: '70vh', background: '#0d0603', display: 'flex', alignItems: 'center', paddingTop: '64px', position: 'relative', overflow: 'hidden' }}>
+                {/* Video Background */}
+                <video autoPlay muted loop playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}>
+                    <source src="/hero.webm" type="video/webm" />
+                </video>
+                {/* Dark Overlay */}
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(10,4,2,0.72) 0%, rgba(20,8,4,0.55) 100%)', zIndex: 1 }} />
+
+                <div aria-hidden style={{ position: 'absolute', right: '-5%', top: '50%', transform: 'translateY(-50%)', fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '60vw', lineHeight: 1, color: '#a93200', opacity: 0.06, pointerEvents: 'none', userSelect: 'none', zIndex: 2 }}>D</div>
+                <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '80px 64px', position: 'relative', zIndex: 3 }} className="section-pad">
+                    <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#e84a1a', marginBottom: '24px' }}>— Portfolio Projects</p>
+                    <h1 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: 'clamp(36px, 7vw, 72px)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'uppercase', color: '#ffffff', maxWidth: '800px', marginBottom: '24px', textShadow: '0 2px 24px rgba(0,0,0,0.4)' }}>
                         Engineering the{' '}
-                        <span style={{ color: '#a93200' }}>Energy Landscape.</span>
+                        <span style={{ color: '#e84a1a' }}>Energy Landscape.</span>
                     </h1>
-                    <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '18px', color: '#5a4139', lineHeight: 1.6, maxWidth: '560px' }}>
+                    <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '18px', color: 'rgba(255,255,255,0.78)', lineHeight: 1.6, maxWidth: '560px' }}>
                         Our portfolio spans complex industrial infrastructure across Indonesia, from high-pressure piping systems to strategic drilling logistics and civil ground works.
                     </p>
                 </div>
@@ -157,9 +164,9 @@ export default function ProjectsPage() {
                             { label: 'Industrial Access Site — Kutai' },
                             { label: 'Land Clearing Operations — Paser' },
                         ].map((item) => (
-                            <div key={item.label} style={{ height: '280px', background: '#eae7e7', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-                                <div style={{ color: '#8e7067', fontFamily: 'monospace', fontSize: '16px', fontWeight: 'bold' }}>640 x 280</div>
-                                <div style={{ position: 'absolute', bottom: '16px', left: '16px', background: 'rgba(28,27,27,0.75)', padding: '6px 12px', borderRadius: '0.25rem' }}>
+                            <div key={item.label} style={{ height: '280px', background: '#eae7e7', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}>
+                                <img src="/construction(640x280).webp" alt={item.label} style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} />
+                                <div style={{ position: 'absolute', bottom: '16px', left: '16px', background: 'rgba(28,27,27,0.75)', padding: '6px 12px', borderRadius: '0.25rem', zIndex: 1 }}>
                                     <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '11px', color: '#e2bfb4', letterSpacing: '0.06em' }}>{item.label}</p>
                                 </div>
                             </div>

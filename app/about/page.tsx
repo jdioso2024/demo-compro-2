@@ -29,7 +29,7 @@ export default function AboutPage() {
             <section
                 style={{
                     minHeight: '70vh',
-                    background: '#fcf9f8',
+                    background: '#0d0603',
                     display: 'flex',
                     alignItems: 'center',
                     paddingTop: '64px',
@@ -37,10 +37,17 @@ export default function AboutPage() {
                     overflow: 'hidden',
                 }}
             >
-                <div aria-hidden style={{ position: 'absolute', right: '-5%', top: '50%', transform: 'translateY(-50%)', fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '60vw', lineHeight: 1, color: '#a93200', opacity: 0.04, pointerEvents: 'none', userSelect: 'none' }}>D</div>
+                {/* Video Background */}
+                <video autoPlay muted loop playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}>
+                    <source src="/hero.webm" type="video/webm" />
+                </video>
+                {/* Dark Overlay */}
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(10,4,2,0.72) 0%, rgba(20,8,4,0.55) 100%)', zIndex: 1 }} />
 
-                <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '80px 64px', position: 'relative', zIndex: 1 }} className="section-pad">
-                    <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#a93200', marginBottom: '24px' }}>— About Us</p>
+                <div aria-hidden style={{ position: 'absolute', right: '-5%', top: '50%', transform: 'translateY(-50%)', fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '60vw', lineHeight: 1, color: '#a93200', opacity: 0.06, pointerEvents: 'none', userSelect: 'none', zIndex: 2 }}>D</div>
+
+                <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '80px 64px', position: 'relative', zIndex: 3 }} className="section-pad">
+                    <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#e84a1a', marginBottom: '24px' }}>— About Us</p>
                     <h1
                         style={{
                             fontFamily: 'Sora, sans-serif',
@@ -49,16 +56,17 @@ export default function AboutPage() {
                             lineHeight: 1.05,
                             letterSpacing: '-0.02em',
                             textTransform: 'uppercase',
-                            color: '#1c1b1b',
+                            color: '#ffffff',
                             maxWidth: '800px',
                             marginBottom: '24px',
+                            textShadow: '0 2px 24px rgba(0,0,0,0.4)',
                         }}
                     >
                         Building the{' '}
-                        <span style={{ color: '#a93200' }}>Future</span>
+                        <span style={{ color: '#e84a1a' }}>Future</span>
                         <br />of Infrastructure
                     </h1>
-                    <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '18px', color: '#5a4139', lineHeight: 1.6, maxWidth: '580px' }}>
+                    <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '18px', color: 'rgba(255,255,255,0.78)', lineHeight: 1.6, maxWidth: '580px' }}>
                         PT Dayana Energi Nusantara berdiri di garis terdepan infrastruktur industri Indonesia — memberikan solusi presisi penuh untuk sektor energi, konstruksi, dan teknik mekanik.
                     </p>
                 </div>
@@ -93,16 +101,16 @@ export default function AboutPage() {
 
                         {/* Image cards */}
                         <div style={{ display: 'grid', gridTemplateRows: '1fr 1fr', gap: '16px' }}>
-                            <div style={{ height: '200px', background: '#eae7e7', border: '1px solid #dcd9d9', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.25rem' }}>
-                                <div style={{ color: '#8e7067', fontFamily: 'monospace', fontSize: '16px', fontWeight: 'bold' }}>700 x 200</div>
-                                <div style={{ position: 'absolute', bottom: '16px', left: '16px', background: 'rgba(28,27,27,0.7)', padding: '6px 12px', borderRadius: '0.25rem' }}>
+                            <div style={{ height: '200px', background: '#eae7e7', border: '1px solid #dcd9d9', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.25rem', overflow: 'hidden' }}>
+                                <img src="/construction(700x200).webp" alt="Proyek Konstruksi" style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} />
+                                <div style={{ position: 'absolute', bottom: '16px', left: '16px', background: 'rgba(28,27,27,0.7)', padding: '6px 12px', borderRadius: '0.25rem', zIndex: 1 }}>
                                     <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', color: '#a93200', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Proyek Konstruksi</p>
                                     <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '14px', color: '#fff', fontWeight: 600 }}>Pembangunan Infrastruktur Industri</p>
                                 </div>
                             </div>
-                            <div style={{ height: '200px', background: '#eae7e7', border: '1px solid #dcd9d9', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.25rem' }}>
-                                <div style={{ color: '#8e7067', fontFamily: 'monospace', fontSize: '16px', fontWeight: 'bold' }}>700 x 200</div>
-                                <div style={{ position: 'absolute', bottom: '16px', left: '16px', background: 'rgba(28,27,27,0.7)', padding: '6px 12px', borderRadius: '0.25rem' }}>
+                            <div style={{ height: '200px', background: '#eae7e7', border: '1px solid #dcd9d9', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.25rem', overflow: 'hidden' }}>
+                                <img src="/construction(700x200).webp" alt="Energy Systems" style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} />
+                                <div style={{ position: 'absolute', bottom: '16px', left: '16px', background: 'rgba(28,27,27,0.7)', padding: '6px 12px', borderRadius: '0.25rem', zIndex: 1 }}>
                                     <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', color: '#a93200', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Energy Systems</p>
                                     <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '14px', color: '#fff', fontWeight: 600 }}>Critical Energy Infrastructure</p>
                                 </div>
@@ -168,17 +176,16 @@ export default function AboutPage() {
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }} className="leaders-grid">
                         {leaders.map((l) => (
                             <div key={l.name} style={{ border: '1px solid #e2bfb4', background: '#ffffff', overflow: 'hidden', borderRadius: '0.5rem', boxShadow: '0px 2px 4px rgba(0,0,0,0.05)' }}>
-                                {/* Photo placeholder */}
+                                {/* Photo */}
                                 <div
                                     style={{
                                         height: '240px',
                                         background: '#eae7e7',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
+                                        position: 'relative',
+                                        overflow: 'hidden',
                                     }}
                                 >
-                                    <div style={{ color: '#8e7067', fontFamily: 'monospace', fontSize: '16px', fontWeight: 'bold' }}>400 x 240</div>
+                                    <img src="/construction(400x250).webp" alt={l.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </div>
                                 <div style={{ padding: '24px' }}>
                                     <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#a93200', marginBottom: '8px' }}>

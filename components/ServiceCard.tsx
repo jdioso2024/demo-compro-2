@@ -24,21 +24,20 @@ export default function ServiceCard({ icon, category, title, description, tags, 
                 boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
             }}
         >
-            {/* Image placeholder area */}
+            {/* Image area */}
             <div
                 style={{
                     height: '180px',
                     background: '#eae7e7',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
                     position: 'relative',
                     overflow: 'hidden',
                 }}
             >
-                <div style={{ color: '#8e7067', fontFamily: 'monospace', fontSize: '14px', fontWeight: 'bold' }}>
-                    400 x 250
-                </div>
+                <img
+                    src={imageBg || "/construction(400x250).webp"}
+                    alt={title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
             </div>
 
             {/* Divider */}

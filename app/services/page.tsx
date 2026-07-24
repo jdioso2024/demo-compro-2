@@ -29,17 +29,24 @@ export default function ServicesPage() {
     return (
         <>
             {/* ═══════════════════════════ HERO ═══ */}
-            <section style={{ minHeight: '70vh', background: '#fcf9f8', display: 'flex', alignItems: 'center', paddingTop: '64px', position: 'relative', overflow: 'hidden', backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23a93200\' fill-opacity=\'0.03\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}>
-                <div aria-hidden style={{ position: 'absolute', right: '-5%', top: '50%', transform: 'translateY(-50%)', fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '60vw', lineHeight: 1, color: '#a93200', opacity: 0.04, pointerEvents: 'none', userSelect: 'none' }}>D</div>
-                <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '4px', background: '#a93200' }} />
-                <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '80px 64px', position: 'relative', zIndex: 1 }} className="section-pad">
-                    <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#a93200', marginBottom: '24px' }}>— Services & Capabilities</p>
-                    <h1 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: 'clamp(36px, 7vw, 72px)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'uppercase', color: '#1c1b1b', maxWidth: '800px', marginBottom: '24px' }}>
+            <section style={{ minHeight: '70vh', background: '#0d0603', display: 'flex', alignItems: 'center', paddingTop: '64px', position: 'relative', overflow: 'hidden' }}>
+                {/* Video Background */}
+                <video autoPlay muted loop playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}>
+                    <source src="/hero.webm" type="video/webm" />
+                </video>
+                {/* Dark Overlay */}
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(10,4,2,0.72) 0%, rgba(20,8,4,0.55) 100%)', zIndex: 1 }} />
+
+                <div aria-hidden style={{ position: 'absolute', right: '-5%', top: '50%', transform: 'translateY(-50%)', fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '60vw', lineHeight: 1, color: '#a93200', opacity: 0.06, pointerEvents: 'none', userSelect: 'none', zIndex: 2 }}>D</div>
+                <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: '4px', background: '#a93200', zIndex: 3 }} />
+                <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '80px 64px', position: 'relative', zIndex: 3 }} className="section-pad">
+                    <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#e84a1a', marginBottom: '24px' }}>— Services &amp; Capabilities</p>
+                    <h1 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: 'clamp(36px, 7vw, 72px)', lineHeight: 1.05, letterSpacing: '-0.02em', textTransform: 'uppercase', color: '#ffffff', maxWidth: '800px', marginBottom: '24px', textShadow: '0 2px 24px rgba(0,0,0,0.4)' }}>
                         Engineering{' '}
-                        <span style={{ color: '#a93200' }}>Industrial</span>
+                        <span style={{ color: '#e84a1a' }}>Industrial</span>
                         <br />Excellence.
                     </h1>
-                    <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '18px', color: '#5a4139', lineHeight: 1.6, maxWidth: '540px' }}>
+                    <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '18px', color: 'rgba(255,255,255,0.78)', lineHeight: 1.6, maxWidth: '540px' }}>
                         PT Dayana Energi Nusantara provides comprehensive service solutions for civil engineering, energy infrastructure, and strategic manpower. We combine high-precision technical skills with high reliability to complete large-scale projects.
                     </p>
                 </div>
@@ -62,9 +69,13 @@ export default function ServicesPage() {
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', background: '#e2bfb4' }}>
                         {civilServices.map((s) => (
                             <div key={s.title} style={{ background: '#fcf9f8', padding: '0' }}>
-                                {/* image placeholder */}
-                                <div style={{ height: '180px', background: '#eae7e7', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-                                    <div style={{ color: '#8e7067', fontFamily: 'monospace', fontSize: '14px', fontWeight: 'bold' }}>400 x 180</div>
+                                {/* image */}
+                                <div style={{ height: '180px', background: '#eae7e7', position: 'relative', overflow: 'hidden' }}>
+                                    <img
+                                        src="/construction(400x180).webp"
+                                        alt={s.title}
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    />
                                 </div>
                                 <div style={{ padding: '24px', borderTop: '1px solid #e2bfb4' }}>
                                     <h3 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '16px', color: '#1c1b1b', textTransform: 'uppercase', marginBottom: '16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -116,9 +127,9 @@ export default function ServicesPage() {
                         </div>
 
                         {/* Feature image */}
-                        <div style={{ height: '400px', background: '#eae7e7', border: '1px solid #dcd9d9', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.25rem' }}>
-                            <div style={{ color: '#8e7067', fontFamily: 'monospace', fontSize: '16px', fontWeight: 'bold' }}>500 x 400</div>
-                            <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', background: '#a93200', padding: '16px 24px', borderRadius: '0 0 0.25rem 0.25rem' }}>
+                        <div style={{ height: '400px', background: '#eae7e7', border: '1px solid #dcd9d9', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.25rem', overflow: 'hidden' }}>
+                            <img src="/construction(600x400).webp" alt="Critical Pressure Systems" style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} />
+                            <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', background: '#a93200', padding: '16px 24px', borderRadius: '0 0 0.25rem 0.25rem', zIndex: 1 }}>
                                 <p style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '14px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.05em' }}>CRITICAL PRESSURE SYSTEMS</p>
                             </div>
                         </div>
@@ -139,9 +150,9 @@ export default function ServicesPage() {
 
                     <div style={{ display: 'grid', gridTemplateColumns: '7fr 5fr', gap: '24px', marginTop: '48px', alignItems: 'stretch' }}>
                         {/* Heavy equipment card */}
-                        <div style={{ height: '100%', minHeight: '280px', background: '#eae7e7', border: '1px solid #dcd9d9', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.25rem' }}>
-                            <div style={{ color: '#8e7067', fontFamily: 'monospace', fontSize: '16px', fontWeight: 'bold' }}>500 x 280</div>
-                            <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', padding: '20px 24px', background: 'rgba(28,27,27,0.75)', borderRadius: '0 0 0.25rem 0.25rem' }}>
+                        <div style={{ height: '100%', minHeight: '280px', background: '#eae7e7', border: '1px solid #dcd9d9', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.25rem', overflow: 'hidden' }}>
+                            <img src="/construction(500x280).webp" alt="Heavy Equipment" style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} />
+                            <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', padding: '20px 24px', background: 'rgba(28,27,27,0.75)', borderRadius: '0 0 0.25rem 0.25rem', zIndex: 1 }}>
                                 <p style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '16px', color: '#ffffff', textTransform: 'uppercase', marginBottom: '8px' }}>Heavy Equipment Fleet</p>
                                 <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '13px', color: '#e2bfb4' }}>Comprehensive fleet of state-of-the-art heavy equipment. Encompassing more than 12 specialized units.</p>
                                 <button style={{ background: '#a93200', border: '1px solid #a93200', color: '#ffffff', fontFamily: 'JetBrains Mono, monospace', fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', padding: '8px 16px', marginTop: '12px', cursor: 'pointer', borderRadius: '0.25rem' }}>
