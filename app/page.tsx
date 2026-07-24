@@ -141,7 +141,7 @@ export default function HomePage() {
                     {/* CTAs */}
                     <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '80px' }}>
                         <Link
-                            href="/projects"
+                            href="/services"
                             style={{
                                 background: '#a93200',
                                 color: '#ffffff',
@@ -158,10 +158,10 @@ export default function HomePage() {
                                 borderRadius: '0.25rem',
                             }}
                         >
-                            EKSPLORASI PROYEK KAMI <ArrowRight size={16} />
+                            EKSPLORASI LAYANAN KAMI <ArrowRight size={16} />
                         </Link>
                         <Link
-                            href="/portfolio"
+                            href="/projects"
                             style={{
                                 border: '1px solid rgba(255,255,255,0.4)',
                                 color: '#ffffff',
@@ -180,7 +180,7 @@ export default function HomePage() {
                                 borderRadius: '0.25rem',
                             }}
                         >
-                            LIHAT PORTFOLIO
+                            LIHAT PROYEK KAMI
                         </Link>
                     </div>
 
