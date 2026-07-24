@@ -16,10 +16,10 @@ const leaders = [
 ];
 
 const values = [
-    { label: 'Integrity', icon: '⚖️', desc: 'Unrelenting ethics and professional conduct, covering all actions, assets, consent, and deliverables.' },
-    { label: 'Precision', icon: '🎯', desc: 'Engineering is the word. Precision committed. Flawless constructed from millimeter accuracy upward.' },
-    { label: 'Safety', icon: '🛡️', desc: 'Zero compromise. High-standard HSE standards to ensure all our personnel and surrounding environment are safe.' },
-    { label: 'Excellence', icon: '🏆', desc: 'Consistently driving ambition, quality excellence, and delivering industry advancement achievements.' },
+    { num: '01', label: 'Integrity', color: '#16a34a', desc: 'Unyielding ethical standards in every contract, project, and partnership.' },
+    { num: '02', label: 'Precision', color: '#e84a1a', desc: 'Engineering to the exact millimeter, ensuring flawless operational longevity.' },
+    { num: '03', label: 'Safety', color: '#16a34a', desc: 'Zero-compromise approach to HSE standards to protect our most valuable asset: people.' },
+    { num: '04', label: 'Excellence', color: '#e84a1a', desc: 'Continuously evolving technical capabilities to outpace industry demands.' },
 ];
 
 export default function AboutPage() {
@@ -203,25 +203,24 @@ export default function AboutPage() {
             {/* ═══════════════════════════ VALUES ═══ */}
             <section style={{ background: '#fcf9f8', padding: '120px 0' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }} className="section-pad">
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '56px', flexWrap: 'wrap', gap: '24px' }}>
-                        <div>
-                            <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#a93200', marginBottom: '16px' }}>Core Values</p>
-                            <h2 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '36px', textTransform: 'uppercase', color: '#1c1b1b' }}>
-                                The Principles that<br />Drive Every Connection
-                            </h2>
-                        </div>
-                        <div style={{ display: 'flex', gap: '8px' }}>
-                            {['01', '02', '03', '04'].map((n) => (
-                                <div key={n} style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '11px', color: '#8e7067', border: '1px solid #e2bfb4', padding: '4px 10px', borderRadius: '0.25rem' }}>{n}</div>
-                            ))}
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '64px', flexWrap: 'wrap', gap: '24px' }}>
+                        <h2 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: 'clamp(32px, 4vw, 42px)', color: '#1c1b1b', lineHeight: 1.2, maxWidth: '500px' }}>
+                            The Principles that<br />Drive Every<br />Connection
+                        </h2>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flex: 1, justifyContent: 'flex-end', paddingTop: '32px' }}>
+                            <div style={{ height: '1px', background: '#dcd9d9', width: '100%', maxWidth: '240px' }} />
+                            <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#5a4139', whiteSpace: 'nowrap' }}>Core Values</p>
                         </div>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1px', background: '#e2bfb4' }} className="values-grid">
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '24px' }} className="values-grid">
                         {values.map((v) => (
-                            <div key={v.label} style={{ background: '#fcf9f8', padding: '32px 24px' }}>
-                                <div style={{ fontSize: '32px', marginBottom: '16px' }}>{v.icon}</div>
-                                <h3 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '18px', color: '#1c1b1b', textTransform: 'uppercase', marginBottom: '12px' }}>{v.label}</h3>
+                            <div key={v.label} style={{ background: '#ffffff', border: '1px solid #e2bfb4', padding: '32px 24px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)' }}>
+                                <h3 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 600, fontSize: '20px', color: '#1c1b1b', marginBottom: '16px' }}>{v.label}</h3>
+                                <div style={{ marginBottom: '24px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                    <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', color: '#dcd9d9', letterSpacing: '0.1em' }}>{v.num}</span>
+                                    <div style={{ height: '2px', width: '24px', background: v.color }} />
+                                </div>
                                 <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '14px', color: '#5a4139', lineHeight: 1.6 }}>{v.desc}</p>
                             </div>
                         ))}
