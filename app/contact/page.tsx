@@ -216,13 +216,16 @@ export default function ContactPage() {
               .section-pad { padding: 0 16px !important; }
               .map-section { height: 450px !important; }
               .map-card { 
-                  left: 16px !important; 
+                  left: 12px !important; 
                   bottom: 16px !important; 
                   padding: 16px !important; 
-                  max-width: calc(100% - 32px) !important; 
+                  max-width: 180px !important; 
+                  max-height: 180px !important;
+                  overflow: hidden;
               }
-              .map-card h3 { font-size: 14px !important; margin-bottom: 4px !important; }
-              .map-card p { font-size: 12px !important; line-height: 1.4 !important; margin-bottom: 8px !important; }
+              .map-card h3 { font-size: 8px !important; margin-bottom: 2px !important; }
+              .map-card p { font-size: 6px !important; line-height: 1.4 !important; margin-bottom: 2px !important; }
+              .map-card a { font-size: 6px !important; }
           }
         `}</style>
             </section>
@@ -243,12 +246,12 @@ export default function ContactPage() {
                 </div>
 
                 {/* Card overlay */}
-                <div style={{ position: 'absolute', bottom: '32px', left: '64px', background: 'rgba(252,249,248,0.95)', border: '1px solid #e2bfb4', padding: '24px 32px', maxWidth: '320px', borderRadius: '0.25rem' }} className="map-card">
-                    <h3 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '16px', textTransform: 'uppercase', color: '#1c1b1b', marginBottom: '8px' }}>Headquarters</h3>
-                    <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '14px', color: '#5a4139', lineHeight: 1.6, marginBottom: '16px' }}>
+                <div style={{ position: 'absolute', bottom: '32px', left: '64px', background: 'rgba(252,249,248,0.95)', border: '1px solid #e2bfb4', padding: '24px 32px', maxWidth: '180px', maxHeight: '180px', borderRadius: '0.25rem' }} className="map-card">
+                    <h3 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '14px', textTransform: 'uppercase', color: '#1c1b1b', marginBottom: '8px' }}>Headquarters</h3>
+                    <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '10px', color: '#5a4139', lineHeight: 1.6, marginBottom: '4px' }}>
                         Strategic operations base serving major industrial hubs across Indonesia.
                     </p>
-                    <a href="https://maps.google.com" target="_blank" rel="noreferrer" style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '11px', letterSpacing: '0.1em', color: '#a93200', textDecoration: 'none', textTransform: 'uppercase' }}>
+                    <a href="https://maps.google.com" target="_blank" rel="noreferrer" style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', letterSpacing: '0.1em', color: '#a93200', textDecoration: 'none', textTransform: 'uppercase' }}>
                         Get Directions ↗
                     </a>
                 </div>
