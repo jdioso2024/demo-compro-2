@@ -251,7 +251,7 @@ export default function ContactPage() {
                     <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '10px', color: '#5a4139', lineHeight: 1.6, marginBottom: '4px' }}>
                         Strategic operations base serving major industrial hubs across Indonesia.
                     </p>
-                    <a href="https://maps.google.com" target="_blank" rel="noreferrer" style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', letterSpacing: '0.1em', color: '#a93200', textDecoration: 'none', textTransform: 'uppercase' }}>
+                    <a href="https://maps.app.goo.gl/zE3KpSN3y6RPQwnm8" target="_blank" rel="noreferrer" style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', letterSpacing: '0.1em', color: '#a93200', textDecoration: 'none', textTransform: 'uppercase' }}>
                         Get Directions ↗
                     </a>
                 </div>
