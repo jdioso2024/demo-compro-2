@@ -212,12 +212,23 @@ export default function ContactPage() {
                 <style jsx>{`
           @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr !important; } }
           @media (max-width: 600px) { .form-row { grid-template-columns: 1fr !important; } }
-          @media (max-width: 768px) { .section-pad { padding: 0 16px !important; } }
+          @media (max-width: 768px) { 
+              .section-pad { padding: 0 16px !important; }
+              .map-section { height: 450px !important; }
+              .map-card { 
+                  left: 16px !important; 
+                  bottom: 16px !important; 
+                  padding: 16px !important; 
+                  max-width: calc(100% - 32px) !important; 
+              }
+              .map-card h3 { font-size: 14px !important; margin-bottom: 4px !important; }
+              .map-card p { font-size: 12px !important; line-height: 1.4 !important; margin-bottom: 8px !important; }
+          }
         `}</style>
             </section>
 
             {/* ═══════════════════════════ MAP ═══ */}
-            <section style={{ background: '#eae7e7', padding: '0', position: 'relative', height: '400px', overflow: 'hidden', borderTop: '1px solid #e2bfb4' }}>
+            <section className="map-section" style={{ background: '#eae7e7', padding: '0', position: 'relative', height: '400px', overflow: 'hidden', borderTop: '1px solid #e2bfb4' }}>
                 {/* Google Maps Embed */}
                 <div style={{ position: 'absolute', inset: 0, background: '#eae7e7' }}>
                     <iframe
