@@ -20,6 +20,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
     return (
         <div
+            className="project-card"
             style={{
                 position: 'relative',
                 height: size === 'large' ? '400px' : '320px',
@@ -28,7 +29,6 @@ export default function ProjectCard({
                 borderStyle: 'solid',
                 borderColor: '#e2bfb4',
                 cursor: 'pointer',
-                transition: 'border-color 0.2s',
             }}
         >
             {/* Background image */}

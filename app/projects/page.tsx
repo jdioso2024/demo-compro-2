@@ -84,7 +84,7 @@ export default function ProjectsPage() {
             </section>
 
             {/* ═══════════════════════════ PROJECTS GRID ═══ */}
-            <section style={{ background: '#f6f3f2', padding: '80px 0 120px' }}>
+            <section style={{ background: '#f6f3f2', padding: 'var(--py-section-md) 0 var(--py-section)' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }} className="section-pad">
                     {/* Filter tabs + sort */}
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '48px', flexWrap: 'wrap', gap: '16px' }}>
@@ -130,26 +130,20 @@ export default function ProjectsPage() {
                         </p>
                     )}
                 </div>
-                <style jsx>{`
-          @media (max-width: 768px) { .projects-grid { grid-template-columns: 1fr !important; } .section-pad { padding: 0 16px !important; } }
-        `}</style>
             </section>
 
             {/* ═══════════════════════════ METRICS STRIP ═══ */}
-            <section style={{ background: '#eae7e7', padding: '80px 0', borderTop: '1px solid #e2bfb4' }}>
+            <section style={{ background: '#eae7e7', padding: 'var(--py-section-md) 0', borderTop: '1px solid #e2bfb4' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '40px', borderBottom: '1px solid #e2bfb4', paddingBottom: '80px' }} className="metrics-grid">
                     <MetricBadge value="150+" label="Projects Completed" sublabel="Nationwide" />
                     <MetricBadge value="10M" label="Sqm Work Area" sublabel="Across sites" />
                     <MetricBadge value="32" label="Heavy Units" sublabel="Equipment fleet" />
                     <MetricBadge value="ISO" label="Certified Quality" sublabel="3 Standards" />
                 </div>
-                <style jsx>{`
-          @media (max-width: 768px) { .metrics-grid { grid-template-columns: 1fr 1fr !important; padding: 0 16px 40px !important; } }
-        `}</style>
             </section>
 
             {/* ═══════════════════════════ RECENT ACHIEVEMENTS ═══ */}
-            <section style={{ background: '#f6f3f2', padding: '80px 0' }}>
+            <section style={{ background: '#f6f3f2', padding: 'var(--py-section-md) 0' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }} className="section-pad">
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
                         <h2 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '24px', textTransform: 'uppercase', color: '#1c1b1b' }}>Recent Achievements</h2>
@@ -173,9 +167,6 @@ export default function ProjectsPage() {
                         ))}
                     </div>
                 </div>
-                <style jsx>{`
-          @media (max-width: 768px) { .gallery-grid { grid-template-columns: 1fr !important; } .section-pad { padding: 0 16px !important; } }
-        `}</style>
             </section>
         </>
     );

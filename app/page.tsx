@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import ServiceCard from '@/components/ServiceCard';
 import ProjectCard from '@/components/ProjectCard';
-import { ArrowRight, ShieldCheck, Clock, Award } from 'lucide-react';
+import { ArrowRight, Building2, Droplets, Factory, UserCog } from 'lucide-react';
 
 export default function HomePage() {
     return (
@@ -109,7 +109,7 @@ export default function HomePage() {
                         style={{
                             fontFamily: 'Sora, sans-serif',
                             fontWeight: 800,
-                            fontSize: 'clamp(48px, 6vw, 72px)',
+                            fontSize: 'clamp(36px, 8vw, 72px)',
                             lineHeight: 1.05,
                             letterSpacing: '-0.02em',
                             color: '#ffffff',
@@ -184,45 +184,27 @@ export default function HomePage() {
                         </Link>
                     </div>
 
-                    {/* ═══════════════════════════════════════ 2. STATS STRIP ═══ */}
-                    <div style={{
-                        borderTop: '1px solid rgba(255,255,255,0.15)',
-                        paddingTop: '40px',
-                        paddingBottom: '40px',
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        gap: '24px'
-                    }}>
-                        {/* Stat 1 */}
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', borderLeft: '2px solid #a93200', paddingLeft: '16px', paddingRight: '32px', borderRight: '1px solid rgba(255,255,255,0.15)' }}>
-                            <ShieldCheck color="#e84a1a" size={28} />
-                            <div>
-                                <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '18px', color: '#ffffff', lineHeight: 1.2 }}>ZERO<br />ACCIDENT</div>
-                                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', color: 'rgba(255,255,255,0.55)', marginTop: '4px' }}>Safety &amp; Health<br />Compliance</div>
-                            </div>
-                        </div>
-                        {/* Stat 2 */}
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', borderLeft: '2px solid #a93200', paddingLeft: '16px', paddingRight: '32px', borderRight: '1px solid rgba(255,255,255,0.15)' }}>
-                            <Clock color="#e84a1a" size={28} />
-                            <div>
-                                <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '18px', color: '#ffffff', lineHeight: 1.2 }}>100% ON-<br />TIME</div>
-                                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', color: 'rgba(255,255,255,0.55)', marginTop: '4px' }}>Quality &amp; Schedule<br />Guarantees</div>
-                            </div>
-                        </div>
-                        {/* Stat 3 */}
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', borderLeft: '2px solid #a93200', paddingLeft: '16px' }}>
-                            <Award color="#e84a1a" size={28} />
-                            <div>
-                                <div style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: '18px', color: '#ffffff', lineHeight: 1.2 }}>CSMS<br />CERTIFIED</div>
-                                <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', color: 'rgba(255,255,255,0.55)', marginTop: '4px' }}>High level compliance</div>
-                            </div>
-                        </div>
+                </div>
+            </section>
+
+            {/* ═══════════════════════════════════════ 2. CLIENTS SECTION ═══ */}
+            <section style={{ background: '#ffffff', padding: 'var(--py-section-sm) 0', borderBottom: '1px solid #e2bfb4' }}>
+                <div className="section-pad" style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }}>
+                    <h3 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 600, fontSize: '12px', color: '#a93200', textAlign: 'center', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '32px' }}>
+                        Dipercaya oleh pemimpin industri
+                    </h3>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 'clamp(32px, 5vw, 64px)', flexWrap: 'wrap' }}>
+                        {/* Client Logos (Ganti src dengan path logo Anda sendiri) */}
+                        <img src="/client-pertamina.svg" alt="Client 1" style={{ height: '40px', objectFit: 'contain' }} />
+                        <img src="/client-chevron.svg" alt="Client 2" style={{ height: '40px', objectFit: 'contain' }} />
+                        <img src="/client-medco.svg" alt="Client 3" style={{ height: '40px', objectFit: 'contain' }} />
+                        <img src="/client-pln.svg" alt="Client 4" style={{ height: '40px', objectFit: 'contain' }} />
                     </div>
                 </div>
             </section>
 
             {/* ═══════════════════════════════════════ 3. SERVICES SECTION ═══ */}
-            <section style={{ background: '#f6f3f2', padding: '120px 0' }}>
+            <section style={{ background: '#f6f3f2', padding: 'var(--py-section) 0' }}>
                 <div className="section-pad" style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }}>
 
                     <div style={{ marginBottom: '64px' }}>
@@ -264,7 +246,7 @@ export default function HomePage() {
             </section>
 
             {/* ═══════════════════════════════════════ 4. PROJECTS SECTION ═══ */}
-            <section style={{ background: '#eae7e7', padding: '120px 0' }}>
+            <section style={{ background: '#eae7e7', padding: 'var(--py-section) 0' }}>
                 <div className="section-pad" style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }}>
 
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '64px' }}>
@@ -327,9 +309,9 @@ export default function HomePage() {
             </section>
 
             {/* ═══════════════════════════════════════ 5. HSE SECTION ═══ */}
-            <section style={{ background: '#fcf9f8', padding: '120px 0', borderTop: '1px solid #e2bfb4' }}>
+            <section style={{ background: '#fcf9f8', padding: 'var(--py-section) 0', borderTop: '1px solid #e2bfb4' }}>
                 <div className="section-pad" style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }}>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'center' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'center' }} className="grid-2col">
                         <div>
                             <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', fontWeight: 500, letterSpacing: '0.12em', color: '#a93200', textTransform: 'uppercase' }}>
                                 HSE &amp; COMPLIANCE

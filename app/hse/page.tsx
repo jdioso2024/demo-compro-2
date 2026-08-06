@@ -49,7 +49,7 @@ export default function HSEPage() {
             </section>
 
             {/* ISO Certifications */}
-            <section style={{ background: '#f6f3f2', padding: '80px 0', borderTop: '1px solid #e2bfb4' }}>
+            <section style={{ background: '#f6f3f2', padding: 'var(--py-section-md) 0', borderTop: '1px solid #e2bfb4' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }} className="section-pad">
                     <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#a93200', marginBottom: '40px' }}>— Active Certifications</p>
                     <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
@@ -61,7 +61,7 @@ export default function HSEPage() {
             </section>
 
             {/* Principles grid */}
-            <section style={{ background: '#fcf9f8', padding: '80px 0 120px' }}>
+            <section style={{ background: '#fcf9f8', padding: 'var(--py-section-md) 0 var(--py-section)' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }} className="section-pad">
                     <h2 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '36px', textTransform: 'uppercase', color: '#1c1b1b', marginBottom: '56px' }}>Our HSE Principles</h2>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }} className="hse-grid">

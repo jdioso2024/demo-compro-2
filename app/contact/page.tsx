@@ -37,7 +37,7 @@ export default function ContactPage() {
             </section>
 
             {/* ═══════════════════════════ CONTACT SECTION ═══ */}
-            <section style={{ background: '#f6f3f2', padding: '80px 0 120px' }}>
+            <section style={{ background: '#f6f3f2', padding: 'var(--py-section-md) 0 var(--py-section)' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }} className="section-pad">
                     <div style={{ display: 'grid', gridTemplateColumns: '5fr 7fr', gap: '80px', alignItems: 'start' }} className="contact-grid">
                         {/* Left: Info */}
@@ -218,26 +218,17 @@ export default function ContactPage() {
 
             {/* ═══════════════════════════ MAP ═══ */}
             <section style={{ background: '#eae7e7', padding: '0', position: 'relative', height: '400px', overflow: 'hidden', borderTop: '1px solid #e2bfb4' }}>
-                {/* Stylized Jakarta map */}
-                <div style={{ position: 'absolute', inset: 0, background: '#eae7e7', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <svg viewBox="0 0 800 400" style={{ width: '100%', height: '100%', opacity: 0.2 }}>
-                        {/* Grid lines */}
-                        {Array.from({ length: 20 }).map((_, i) => (
-                            <line key={`v${i}`} x1={i * 42} y1={0} x2={i * 42} y2={400} stroke="#a93200" strokeWidth="0.5" />
-                        ))}
-                        {Array.from({ length: 10 }).map((_, i) => (
-                            <line key={`h${i}`} x1={0} y1={i * 44} x2={800} y2={i * 44} stroke="#a93200" strokeWidth="0.5" />
-                        ))}
-                        {/* Roads */}
-                        <path d="M 100 200 L 700 200" stroke="#a93200" strokeWidth="2" />
-                        <path d="M 400 50 L 400 350" stroke="#a93200" strokeWidth="2" />
-                        <path d="M 150 100 L 650 300" stroke="#a93200" strokeWidth="1" strokeDasharray="10 5" />
-                    </svg>
-                </div>
-
-                {/* Location pin overlay */}
-                <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
-                    <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: '#a93200', border: '3px solid rgba(169,50,0,0.3)', animation: 'pulse 2s infinite' }} />
+                {/* Google Maps Embed */}
+                <div style={{ position: 'absolute', inset: 0, background: '#eae7e7' }}>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5826112825525!2d106.82012741086808!3d-6.186571393775111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f428a74c279b%3A0x3a906017d0fc8502!2sGedung%20JAYA!5e0!3m2!1sid!2sid!4v1786035529248!5m2!1sid!2sid"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen={false}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                    />
                 </div>
 
                 {/* Card overlay */}
@@ -250,14 +241,10 @@ export default function ContactPage() {
                         Get Directions ↗
                     </a>
                 </div>
-                <style jsx>{`
-          @media (max-width: 768px) { .map-card { left: 16px !important; right: 16px !important; } }
-          @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(169,50,0,0.4); } 50% { box-shadow: 0 0 0 12px rgba(169,50,0,0); } }
-        `}</style>
             </section>
 
             {/* ═══════════════════════════ FORMAL QUOTE CTA ═══ */}
-            <section style={{ background: '#f6f3f2', padding: '80px 0', borderTop: '1px solid #e2bfb4', position: 'relative', overflow: 'hidden' }}>
+            <section style={{ background: '#f6f3f2', padding: 'var(--py-section-md) 0', borderTop: '1px solid #e2bfb4', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
                     <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
                         <div style={{ border: '2px solid #a93200', padding: '12px 16px', transform: 'rotate(45deg)', width: '52px', height: '52px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

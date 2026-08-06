@@ -175,13 +175,6 @@ export default function Navbar() {
                 </div>
             )}
 
-            <style jsx>{`
-        @media (max-width: 768px) {
-          .desktop-nav { display: none !important; }
-          .mobile-menu-btn { display: block !important; }
-          .nav-inner { padding: 0 16px !important; }
-        }
-      `}</style>
         </nav>
     );
 }

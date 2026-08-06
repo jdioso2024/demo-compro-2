@@ -73,24 +73,26 @@ export default function AboutPage() {
             </section>
 
             {/* ═══════════════════════════ BLUEPRINT OF EXCELLENCE ═══ */}
-            <section style={{ background: '#f6f3f2', padding: '120px 0' }}>
+            <section style={{ background: '#f6f3f2', padding: 'var(--py-section) 0' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }} className="section-pad">
-                    <div style={{ display: 'grid', gridTemplateColumns: '5fr 7fr', gap: '80px', alignItems: 'start' }} className="blueprint-grid">
+                    <div style={{ display: 'grid', gridTemplateColumns: '5fr 7fr', gap: '80px', alignItems: 'stretch' }} className="blueprint-grid">
                         {/* Text */}
-                        <div>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
-                                <div style={{ width: '32px', height: '1px', background: '#a93200' }} />
-                                <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#a93200' }}>Profile Perusahaan</span>
+                        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                            <div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
+                                    <div style={{ width: '32px', height: '1px', background: '#a93200' }} />
+                                    <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#a93200' }}>Profile Perusahaan</span>
+                                </div>
+                                <h2 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '36px', textTransform: 'uppercase', color: '#1c1b1b', lineHeight: 1.2, marginBottom: '24px' }}>
+                                    The Blueprint of Excellence
+                                </h2>
+                                <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '16px', color: '#5a4139', lineHeight: 1.7, marginBottom: '24px' }}>
+                                    Berdiri di atas fondasi rekam teknis yang kuat, PT Dayana Energi Nusantara telah membuktikan komitmennya, membangun, mengelola, dan menyelesaikan proyek-proyek berdampak tinggi di lingkungan industri paling menantang.
+                                </p>
+                                <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '16px', color: '#5a4139', lineHeight: 1.7, marginBottom: '40px' }}>
+                                    Kami percaya bahwa setiap proyek infrastruktur adalah warisan — struktur yang bertahan puluhan tahun, yang digunakan tidak hanya untuk bisnis energi tetapi untuk bangsa.
+                                </p>
                             </div>
-                            <h2 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: '36px', textTransform: 'uppercase', color: '#1c1b1b', lineHeight: 1.2, marginBottom: '24px' }}>
-                                The Blueprint of Excellence
-                            </h2>
-                            <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '16px', color: '#5a4139', lineHeight: 1.7, marginBottom: '24px' }}>
-                                Berdiri di atas fondasi rekam teknis yang kuat, PT Dayana Energi Nusantara telah membuktikan komitmennya, membangun, mengelola, dan menyelesaikan proyek-proyek berdampak tinggi di lingkungan industri paling menantang.
-                            </p>
-                            <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '16px', color: '#5a4139', lineHeight: 1.7, marginBottom: '40px' }}>
-                                Kami percaya bahwa setiap proyek infrastruktur adalah warisan — struktur yang bertahan puluhan tahun, yang digunakan tidak hanya untuk bisnis energi tetapi untuk bangsa.
-                            </p>
 
                             {/* Stats */}
                             <div style={{ display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
@@ -100,15 +102,15 @@ export default function AboutPage() {
                         </div>
 
                         {/* Image cards */}
-                        <div style={{ display: 'grid', gridTemplateRows: '1fr 1fr', gap: '16px' }}>
-                            <div style={{ height: '200px', background: '#eae7e7', border: '1px solid #dcd9d9', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.25rem', overflow: 'hidden' }}>
+                        <div style={{ display: 'grid', gridTemplateRows: '1fr 1fr', gap: '16px', height: '100%' }}>
+                            <div style={{ minHeight: '200px', height: '100%', background: '#eae7e7', border: '1px solid #dcd9d9', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.25rem', overflow: 'hidden' }}>
                                 <img src="/construction(700x200).webp" alt="Proyek Konstruksi" style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} />
                                 <div style={{ position: 'absolute', bottom: '16px', left: '16px', background: 'rgba(28,27,27,0.7)', padding: '6px 12px', borderRadius: '0.25rem', zIndex: 1 }}>
                                     <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', color: '#a93200', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Proyek Konstruksi</p>
                                     <p style={{ fontFamily: 'Sora, sans-serif', fontSize: '14px', color: '#fff', fontWeight: 600 }}>Pembangunan Infrastruktur Industri</p>
                                 </div>
                             </div>
-                            <div style={{ height: '200px', background: '#eae7e7', border: '1px solid #dcd9d9', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.25rem', overflow: 'hidden' }}>
+                            <div style={{ minHeight: '200px', height: '100%', background: '#eae7e7', border: '1px solid #dcd9d9', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.25rem', overflow: 'hidden' }}>
                                 <img src="/construction(700x200).webp" alt="Energy Systems" style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} />
                                 <div style={{ position: 'absolute', bottom: '16px', left: '16px', background: 'rgba(28,27,27,0.7)', padding: '6px 12px', borderRadius: '0.25rem', zIndex: 1 }}>
                                     <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '10px', color: '#a93200', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Energy Systems</p>
@@ -121,7 +123,7 @@ export default function AboutPage() {
             </section>
 
             {/* ═══════════════════════════ VISION & MISSION ═══ */}
-            <section style={{ background: '#fcf9f8', padding: '120px 0' }}>
+            <section style={{ background: '#fcf9f8', padding: 'var(--py-section) 0' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }} className="section-pad">
                     <div style={{ textAlign: 'center', marginBottom: '56px' }}>
                         <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#a93200', marginBottom: '16px' }}>Our Direction</p>
@@ -165,7 +167,7 @@ export default function AboutPage() {
             </section>
 
             {/* ═══════════════════════════ LEADERSHIP ═══ */}
-            <section style={{ background: '#f6f3f2', padding: '120px 0' }}>
+            <section style={{ background: '#f6f3f2', padding: 'var(--py-section) 0' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }} className="section-pad">
                     <div style={{ textAlign: 'center', marginBottom: '56px' }}>
                         <p style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#a93200', marginBottom: '16px' }}>Our Team</p>
@@ -201,7 +203,7 @@ export default function AboutPage() {
             </section>
 
             {/* ═══════════════════════════ VALUES ═══ */}
-            <section style={{ background: '#fcf9f8', padding: '120px 0' }}>
+            <section style={{ background: '#fcf9f8', padding: 'var(--py-section) 0' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }} className="section-pad">
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '64px', flexWrap: 'wrap', gap: '24px' }}>
                         <h2 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: 'clamp(32px, 4vw, 42px)', color: '#1c1b1b', lineHeight: 1.2, maxWidth: '500px' }}>

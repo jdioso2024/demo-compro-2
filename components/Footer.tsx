@@ -132,16 +132,6 @@ export default function Footer() {
                 </div>
             </div>
 
-            <style jsx>{`
-        @media (max-width: 768px) {
-          .footer-inner { padding: 0 16px !important; }
-          .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
-          .footer-bottom { flex-direction: column !important; gap: 8px !important; text-align: center !important; }
-        }
-        @media (max-width: 480px) {
-          .footer-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
         </footer>
     );
 }

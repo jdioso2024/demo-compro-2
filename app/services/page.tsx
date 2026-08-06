@@ -53,7 +53,7 @@ export default function ServicesPage() {
             </section>
 
             {/* ═══════════════════════════ SECTION 1 — CIVIL WORKS ═══ */}
-            <section style={{ background: '#f6f3f2', padding: '120px 0' }}>
+            <section style={{ background: '#f6f3f2', padding: 'var(--py-section) 0' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
                         <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', color: '#8e7067', border: '1px solid #e2bfb4', padding: '4px 10px', borderRadius: '0.25rem' }}>01</div>
@@ -66,7 +66,7 @@ export default function ServicesPage() {
                         Building the foundation and infrastructure that powers growth. Our highly specialized teams deliver technical support for civil construction from civil foundation to infrastructure challenges systems.
                     </p>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', background: '#e2bfb4' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', background: '#e2bfb4' }} className="grid-3col">
                         {civilServices.map((s) => (
                             <div key={s.title} style={{ background: '#fcf9f8', padding: '0' }}>
                                 {/* image */}
@@ -97,13 +97,13 @@ export default function ServicesPage() {
             </section>
 
             {/* ═══════════════════════════ SECTION 2 — ENERGY SUPPORT ═══ */}
-            <section style={{ background: '#fcf9f8', padding: '120px 0' }}>
+            <section style={{ background: '#fcf9f8', padding: 'var(--py-section) 0' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
                         <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', color: '#8e7067', border: '1px solid #e2bfb4', padding: '4px 10px', borderRadius: '0.25rem' }}>02</div>
                         <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#5a4139' }}>Energy Sector</span>
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: '5fr 7fr', gap: '80px', alignItems: 'start' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '5fr 7fr', gap: '80px', alignItems: 'start' }} className="grid-5-7">
                         <div>
                             <h2 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 700, fontSize: 'clamp(28px, 4vw, 40px)', textTransform: 'uppercase', color: '#1c1b1b', lineHeight: 1.2, marginBottom: '16px' }}>
                                 Energy Support &amp;<br />Infrastructure
@@ -138,7 +138,7 @@ export default function ServicesPage() {
             </section>
 
             {/* ═══════════════════════════ SECTION 3 — PROCUREMENT ═══ */}
-            <section style={{ background: '#f6f3f2', padding: '120px 0' }}>
+            <section style={{ background: '#f6f3f2', padding: 'var(--py-section) 0' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
                         <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '12px', color: '#8e7067', border: '1px solid #e2bfb4', padding: '4px 10px', borderRadius: '0.25rem' }}>03</div>
@@ -148,7 +148,7 @@ export default function ServicesPage() {
                         Procurement &amp; Manpower
                     </h2>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: '7fr 5fr', gap: '24px', marginTop: '48px', alignItems: 'stretch' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '7fr 5fr', gap: '24px', marginTop: '48px', alignItems: 'stretch' }} className="grid-5-7">
                         {/* Heavy equipment card */}
                         <div style={{ height: '100%', minHeight: '280px', background: '#eae7e7', border: '1px solid #dcd9d9', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '0.25rem', overflow: 'hidden' }}>
                             <img src="/construction(500x280).webp" alt="Heavy Equipment" style={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} />
@@ -183,7 +183,7 @@ export default function ServicesPage() {
             </section>
 
             {/* ═══════════════════════════ CTA BANNER ═══ */}
-            <section style={{ background: '#eae7e7', padding: '80px 0', borderTop: '1px solid #e2bfb4' }}>
+            <section style={{ background: '#eae7e7', padding: 'var(--py-section-md) 0', borderTop: '1px solid #e2bfb4' }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 64px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '32px' }}>
                     <div>
                         <h2 style={{ fontFamily: 'Sora, sans-serif', fontWeight: 800, fontSize: 'clamp(24px, 4vw, 40px)', textTransform: 'uppercase', color: '#1c1b1b', lineHeight: 1.2, marginBottom: '12px' }}>
